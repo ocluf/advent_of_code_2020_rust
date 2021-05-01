@@ -19,6 +19,8 @@ fn main() {
         passport_maps.push(passport_fields);
     }
     let mut valid_passports = 0;
+    let filtered_passports = passport_maps.iter().filter(|x| has_required_fields(x));
+
     for passport_map in passport_maps {
         let mut valid = true;
         for &required_field in &required_fields {
@@ -31,4 +33,32 @@ fn main() {
         }
     }
     println!("valid passport = {}", valid_passports)
+}
+
+fn has_required_fields(passport_fields: &HashMap<&str, &str>) -> bool {
+    return false;
+}
+
+fn validate_height(value: &str) -> bool {
+    return false;
+}
+
+fn validate_issue_year(value: &str) -> bool {
+    return false;
+}
+
+fn validate_expiration_year(value: &str) -> bool {
+    return false;
+}
+
+fn validate_hair_color(value: &str) -> bool {
+    return false;
+}
+
+fn validate_eye_color(value: &str) -> bool {
+    return false;
+}
+
+fn validate_passport_number(value: &str) -> bool {
+    return false;
 }
